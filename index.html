@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Senha da Bat-Caverna</title>
+    <meta name="description" content="Gerador de senhas da Bat-Caverna" />
+    <meta name="author" content="Andre Luis Fernandes" />
+    <meta name="reply-to" content="deco.luisfernandes@gmail.com" />
+    <meta name="generator" content="Visual Studio Code" />
+    <meta name="language" content="pt-br" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="keywords" content="gerador, senhas" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="assets/iconBat.png" rel="icon" />
+    <link href="assets/iconBat.png" rel="apple-touch-icon" />
+  </head>
+  <body>
+    <h1 class="title">Gerador de Senhas da Bat-Caverna</h1>
+    <img class="logo" src="assets/logo_bat.png" alt="Logo batman" />
+    <p class="text">Gere aqui a sua senha de acesso</p>
+
+    <div class="container-input">
+      <span>Tamanho <span id="valor"></span> caracteres</span>
+      <input
+        id="slider"
+        class="slider"
+        type="range"
+        min="5"
+        max="25"
+        value="15"
+      />
+
+      <button id="button" class="button-cta" onclick="generatePassword()">
+        Gerar senha
+      </button>
+    </div>
+
+    <div
+      id="container-password"
+      onclick="copyPassword()"
+      class="container-password hide"
+    >
+      <span class="title">Sua senha gerada foi:</span>
+      <span id="password" class="password"></span>
+      <span class="tooltip">Clique na senha para copiar. 👆</span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
