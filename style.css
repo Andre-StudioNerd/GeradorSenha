@@ -13,24 +13,16 @@ body {
   color: #FFFFFF;
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Empilha tudo na vertical */
   justify-content: center;
   align-items: center;
   padding: 20px 16px;
-}
-
-/* Container Principal */
-.app-container {
-  width: 100%;
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
 /* Tipografia */
 .title {
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   font-weight: 700;
   color: #FFF;
   margin-top: 12px;
@@ -39,38 +31,40 @@ body {
 }
 
 .text {
-  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   color: #D1D5DB;
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 24px;
 }
 
 /* Logotipo */
 .logo {
   width: 100%;
-  max-width: 480px;
+  max-width: 320px; /* Tamanho ajustado da logo */
   height: auto;
   object-fit: contain;
-  margin-bottom: 16px;
+  margin: 12px auto;
+  display: block;
 }
 
-/* Formulário / Input */
+/* Container do Formulário */
 .container-input {
   width: 100%;
-  max-width: 480px;
-  margin: 16px 0;
+  max-width: 400px;
+  margin: 16px auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: 12px;
 }
 
 .container-input span {
   color: #FFF;
   font-size: 1.1rem;
-  display: block;
+  display: inline-block;
 }
 
+/* Slider (Range Input) */
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -80,7 +74,6 @@ body {
   background: #3F3F46;
   outline: none;
   cursor: pointer;
-  transition: opacity 0.2s;
 }
 
 .slider::-webkit-slider-thumb {
@@ -108,7 +101,6 @@ body {
   background: #dc7f00;
   cursor: pointer;
   box-shadow: 0 0 6px rgba(220, 127, 0, 0.6);
-  transition: transform 0.2s, background 0.2s;
 }
 
 /* Botão Principal */
@@ -138,8 +130,8 @@ body {
 /* Container de Senha Gerada */
 .container-password {
   width: 100%;
-  max-width: 480px;
-  margin-top: 20px;
+  max-width: 400px;
+  margin: 20px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,23 +180,7 @@ body {
   opacity: 1;
 }
 
-/* Ocultar elementos */
+/* Esconder Elemento */
 .hide {
   display: none !important;
-}
-
-/* Ajustes para telas menores (smartphones) */
-@media (max-width: 480px) {
-  body {
-    padding: 16px 12px;
-  }
-  
-  .button-cta {
-    height: 44px;
-    font-size: 1rem;
-  }
-
-  .password {
-    font-size: 1.1rem;
-  }
 }
